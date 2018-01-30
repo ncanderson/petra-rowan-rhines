@@ -2,7 +2,9 @@
 <html ng-app="petraRowanRhines">
 
 <head lang="en">
-	
+
+	<base href="/"></base>
+
 	<meta charset="utf-8"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
@@ -30,6 +32,11 @@
 	<script type="text/javascript" src="js/lib/angular-ui-router.js"></script>		
 	<script type="text/javascript" src="js/lib/angular-resource.js"></script>		
 		
+		<!-- Auth0 -->
+	<script type="text/javascript" src="js/lib/auth0.js"></script>
+	<script type="text/javascript" src="js/lib/angular-auth0.js"></script>
+	<script type="text/javascript" src="js/auth0-variables.js"></script>
+		
 		<!-- App -->	
 	<script type="text/javascript" src="js/app.module.js"></script>
 	 
@@ -49,12 +56,10 @@
 
 <body>
 	
+    <navbar></navbar>
+
 	<div class="main-wrapper">
-
-	<!-- 	<div id="header" class="content-column" ng-include="'js/components/shared/navigation/mainNavigation.tpl.html'"></div> -->
-
-		<div ui-view="" class="content-column"></div>
-	
+		<div ui-view="" class="content-column"></div>	
 	</div>
 
 </body>
