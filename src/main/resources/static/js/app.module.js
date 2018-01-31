@@ -32,7 +32,7 @@
 				.state('callback', {
 					url: '/callback',
 					controller: 'CallbackController',
-					templateUrl: 'app/callback/callback.html',
+					templateUrl: 'js/components/shared/callback/callback.html',
 					controllerAs: 'vm'
 				});
 		

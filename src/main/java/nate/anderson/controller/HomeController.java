@@ -14,8 +14,12 @@ public class HomeController {
 	}
 
 	@RequestMapping(value={"/", "/home"}, method=RequestMethod.GET)
-    public String getHomePage(Model model) {        
+    public String getHomePage() {        
 		return "index";
     }
 
+	@RequestMapping(value={"/callback"}, method=RequestMethod.GET)
+    public String handleAuth0Callback() {        
+		return "index";
+    }
 }
