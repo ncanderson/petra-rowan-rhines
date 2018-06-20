@@ -17,10 +17,10 @@
     var API_URL = 'http://localhost:3001/api';
     var vm = this;
     vm.auth = authService;
-    vm.message = '';
+    vm.message = ''; 
 
     vm.securedPing = function() {
-      vm.message = '';
+      vm.message = '';  
       $http.get(API_URL + '/private').then(function(result) {
         vm.message = result.data.message;
       }, function(error) {
