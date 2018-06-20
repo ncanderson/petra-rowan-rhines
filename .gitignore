@@ -30,3 +30,7 @@ nbdist/
 
 ### Database resources ###
 'pg_dump command.txt'
+
+### SSH Keys ###
+github_ssh
+github_ssh.pub
