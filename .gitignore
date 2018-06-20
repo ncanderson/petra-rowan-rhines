@@ -26,7 +26,7 @@ nbdist/
 .nb-gradle/
 
 ### Gradle files ###
-.gradle/**
+.gradle/
 
 ### Database resources ###
 'pg_dump command.txt'
