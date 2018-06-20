@@ -7,5 +7,5 @@
     .controller('CallbackController', callbackController);
 
   function callbackController() {}
-  	console.log("here");
+  
 })();

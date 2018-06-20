@@ -8,6 +8,7 @@
 	
 	var petraRowanRhines = angular.module('petraRowanRhines', [
 			'ui.router',
+			'angular-jwt',
 			'auth0.auth0',
 			'home.module'
 		])
@@ -15,13 +16,17 @@
 			'$stateProvider',
 			'$locationProvider',
 			'$urlRouterProvider',
+			'$httpProvider',			// Injecting here allows for modifying the behavior
 			'angularAuth0Provider',
+			'jwtOptionsProvider',
 	
 		function config (
 			$stateProvider,
 		    $locationProvider,
 		    $urlRouterProvider,
-		    angularAuth0Provider
+		    $httpProvider,
+		    angularAuth0Provider,
+		    jwtOptionsProvider
 		) {
 		
 			$stateProvider
@@ -46,11 +51,23 @@
 				scope: 'openid'
 			});
 			
+
 			$urlRouterProvider.otherwise('/');
 			
 			$locationProvider.hashPrefix('');
 			
 			$locationProvider.html5Mode(true);
+			
+			// Set up interceptor for $http requests
+			jwtOptionsProvider.config({				
+				tokenGetter: function() {
+					return localStorage.getItem('access_token');
+				},				
+				whiteListedDomains: ['localhost']
+			});
+
+		    $httpProvider.interceptors.push('jwtInterceptor');
+			
 		}
 
 	]);
