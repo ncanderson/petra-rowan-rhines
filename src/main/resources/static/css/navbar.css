@@ -1,3 +1,38 @@
+.main-nav {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	background: #000000;
+	padding: 20px;
+	height: 140px;
+}
+
+.nav-menu-items ul {
+	display: flex;
+	align-items: center;
+}
+
+.nav-brand-image > img {
+	max-height: 100px;
+}
+
+
+/* 
+#custom-bootstrap-menu {
+	list-style: none;
+	margin: 0; 
+	height: 140px;
+	
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	
+	-webkit-flex-flow: row wrap;
+	justify-content: flex-end;
+}
+
 #custom-bootstrap-menu.navbar-default .navbar-brand {
     color: rgba(13, 148, 140, 1);
 }
@@ -36,3 +71,11 @@
 #custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
     background-color: #000000;
 }
+
+.navbar-brand > img {
+	height: auto;
+	width: auto;
+	max-height: 100px;
+	max-width: 100px;
+	float: left;
+} */

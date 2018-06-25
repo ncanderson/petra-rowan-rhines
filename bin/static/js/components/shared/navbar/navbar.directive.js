@@ -1,23 +1,3 @@
-//(function() {
-//	  
-//	'use strict';
-//	  
-//	angular
-//		.module('petraRowanRhines')
-//		.directive('navbar', {
-//			return {
-//				templateUrl: 'js/components/shared/navbar/navbar.html',		        
-//		        controllerAs: 'vm',
-//	        	controller: ['authService',
-//	        		
-//	        		function navbarController(authService) {
-//	        		var vm = this;
-//	        		vm.auth = authService;
-//	        	}]
-//			}
-//		});	  
-//})();
-
 (function() {
   
   'use strict';
@@ -33,12 +13,12 @@
       controllerAs: 'vm'
     }
   }
-
+  
   navbarController.$inject = ['authService'];
-    
+  
   function navbarController(authService) {
     var vm = this;
     vm.auth = authService;
   }
-  
+    
 })();

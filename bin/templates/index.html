@@ -51,19 +51,28 @@
 	<script type="text/javascript" src="js/app.run.js"></script>
 		
 	<script type="text/javascript" src="js/components/home/home.component.js"></script>
-	<script type="text/javascript" src="js/components/shared/navbar/navbar.directive.js"></script>
 	<script type="text/javascript" src="js/components/auth/auth.service.js"></script>
 	<script type="text/javascript" src="js/components/shared/callback/callback.controller.js"></script>
+		
+		<!-- Directives -->
+	<script type="text/javascript" src="js/components/shared/navbar/navbar.directive.js"></script>
+	<script type="text/javascript" src="js/components/shared/actionsMenu/actionsMenu.directive.js"></script>
 
 </head> 
 
 <body>
-	
-    <navbar></navbar>
 
-	<div class="main-wrapper">
+<div class="body-wrapper">
+	
+    <navbar class="navbar-wrapper"></navbar>
+
+	<div class="content-wrapper">
 		<div ui-view="" class="content-column"></div>	
 	</div>
+
+	<actionsmenu class="actionsMenu-wrapper"></actionsmenu>
+
+</div> 
 
 </body>
 	

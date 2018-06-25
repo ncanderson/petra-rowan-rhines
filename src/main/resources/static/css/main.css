@@ -1,0 +1,41 @@
+.body-wrapper {
+  display: grid;
+  grid-area: body;
+  grid-template-areas: 
+    "body" 
+   	"navbar"
+   	"actionsMenu"
+   	"content";
+}
+
+/* Box sizing helps with consistency in layouts */
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+html {
+	box-sizing: border-box;
+}
+
+/* Defining sections here allows us to define our grid sections later */
+.navbar-wrapper {
+	grid-area: navbar;
+}
+
+.actionsMenu-wrapper {
+	grid-area: actionsMenu;
+}
+
+.content-wrapper {
+	grid-area: content;
+}
+
+/* Define layout here, using the sections defined above */
+@media (min-width: 500px) {
+  .body-wrapper {
+    grid-template-columns: 2fr 10fr;
+    grid-template-areas: 
+      "body body"
+      "navbar navbar"
+      "actionsMenu content";
+  }
+}
