@@ -23,7 +23,7 @@
     
     function handleAuthentication() {
     	
-    	//console.log('handleAuthentication');
+    	console.log('handleAuthentication');
     	
     	angularAuth0.parseHash(function(err, authResult) {
 	        if (authResult && authResult.accessToken && authResult.idToken) {

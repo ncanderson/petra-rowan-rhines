@@ -11,7 +11,7 @@
   function run(authService) {
     // Handle the authentication
     // result in the hash
-    authService.handleAuthentication();
+	authService.handleAuthentication();
   }
 
 })();

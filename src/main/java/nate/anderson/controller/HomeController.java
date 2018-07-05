@@ -20,7 +20,7 @@ public class HomeController {
 
 	@RequestMapping(value={"/callback"}, method=RequestMethod.GET)
     public String handleAuth0Callback() { 
-		System.out.println("test");
+		//System.out.println("test");
 		return "index";
     }
 }
